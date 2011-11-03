@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /biblio/bibtex/contrib/germbib
+# catalog-date 2009-01-04 15:06:03 +0100
+# catalog-license noinfo
+# catalog-version undef
 Name:		texlive-germbib
 Version:	20090104
 Release:	1
@@ -58,6 +64,7 @@ germbib.
 %doc %{_texmfdistdir}/doc/bibtex/germbib/testbibgerm.tex
 %doc %{_texmfdistdir}/doc/bibtex/germbib/testgerb.tex
 %doc %{_texmfdistdir}/doc/bibtex/germbib/xampl.bib
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,3 +75,5 @@ germbib.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
