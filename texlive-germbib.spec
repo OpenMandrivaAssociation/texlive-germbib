@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-germbib
 Version:	20090104
-Release:	4
+Release:	5
 Summary:	German variants of standard BibTeX styles
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/germbib
