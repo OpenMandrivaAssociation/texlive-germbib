@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /biblio/bibtex/contrib/germbib
-# catalog-date 2009-01-04 15:06:03 +0100
-# catalog-license noinfo
-# catalog-version undef
 Name:		texlive-germbib
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	German variants of standard BibTeX styles
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/germbib
 License:	NOINFO
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/germbib.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/germbib.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/germbib.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/germbib.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ developed the babelbib bundle, which (he asserts) supersedes
 germbib.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -58,24 +52,10 @@ germbib.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090104-2
-+ Revision: 752262
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090104-1
-+ Revision: 718538
-- texlive-germbib
-- texlive-germbib
-- texlive-germbib
-- texlive-germbib
-
