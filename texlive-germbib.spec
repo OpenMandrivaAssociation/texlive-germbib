@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	German variants of standard BibTeX styles
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/germbib
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/germbib
 License:	NOINFO
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/germbib.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/germbib.doc.r%{version}.tar.xz
